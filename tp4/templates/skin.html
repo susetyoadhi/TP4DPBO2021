@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>Peminjaman Buku</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Form Peminjaman Buku</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <br />
+  <br />
+
+  <div style="margin-left: 5%">
+    <form action="index.php" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tNama">Nama Peminjam</label>
+          <input type="text" class="form-control" name="tNama" required />
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="tJudul">Judul Buku</label>
+          <input type="text" class="form-control" name="tJudul" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tGenre">Genre</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tGenre" id="tGenre1" value="Comedy" />
+              <label class="form-check-label" for="tGenre1">Comedy</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tGenre" id="tGenre2" value="Romance" />
+              <label class="form-check-label" for="tGenre2">Romance</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tGenre" id="tGenre3" value="Action" />
+              <label class="form-check-label" for="tGenre3">Action</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tGenre" id="tGenre4" value="Mystery" />
+              <label class="form-check-label" for="tGenre4">Mystery</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="tCategory">Category</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tCategory" id="tCategory1" value="Novel" />
+              <label class="form-check-label" for="tCategory1">Novel</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tCategory" id="tCategory2" value="Komik" />
+              <label class="form-check-label" for="tCategory2">Komik</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tCategory" id="tCategory3" value="Majalah" />
+              <label class="form-check-label" for="tCategory3">Majalah</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="twaktupinjam">Waktu Peminjaman</label>
+          <input class="form-control" type="date" name="twaktupinjam" required />
+        </div>
+      </div>
+
+      <button type="submit" name="submit" class="btn btn-primary" value="submit">Add</button>
+    </form>
+    
+    <br>
+    
+    <!-- Tabel 1 - Task -->
+    <div style="display: inline-block; ">
+      <h3>List Peminjaman</h3>
+      <!-- TABEL1 -->
+      <table align="left" border="1" style="text-align: center;">
+        <tr>
+          <td>No</td>
+          <td>Nama Peminjam</td>
+          <td style="width: 40%;">Judul Buku</td>
+          <td>Genre</td>
+          <td>Category</td>
+          <td>Waktu Peminjaman</td>
+          <td>Waktu pengembalian</td>
+          <td>Status</td>
+          <td>Aksi</td>
+        </tr>
+        <tr>
+          <!-- DATA YG AKAN DIGANTI -->
+          DATA_TABEL
+        </tr>
+
+      </table>
+    </div>
+
+    
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
